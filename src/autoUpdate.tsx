@@ -41,6 +41,27 @@ const InitializeApp= ()=> {
   // )
 
   // return null
+  const downloadAndActivate = async () => {
+    try {
+      // Download the update
+      const version = await CapacitorUpdater.download({
+        url: 'https://github.com/Sivaraman1530/autoTest/archive/refs/tags/test.zip',
+        // You may need to specify the current version here
+        version: '3.0.0'
+      });
+
+      // Activate the update
+      await CapacitorUpdater.set(version);
+
+      // Update has been activated
+      console.log('Update activated successfully');
+    } catch (error) {
+      console.error('Error downloading or activating update:', error);
+    }
+  };
+
+  // Ensure download and activation occur when the app is initialized
+  downloadAndActivate();
   CapacitorUpdater.notifyAppReady()
   console.log("test",CapacitorUpdater.notifyAppReady())
   return null
