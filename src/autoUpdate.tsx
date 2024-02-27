@@ -41,7 +41,9 @@ const InitializeApp= ()=> {
   // )
 
   // return null
+  useEffect(()=>{
   const downloadAndActivate = async () => {
+    CapacitorUpdater.notifyAppReady()
     try {
       // Download the update
       const version = await CapacitorUpdater.download({
@@ -58,15 +60,17 @@ console.log("ver",version)
     } catch (error) {
       console.error('Error downloading or activating update:', error);
     }
-  };
-
-  // Ensure download and activation occur when the app is initialized
+    
+  }
   downloadAndActivate();
-  CapacitorUpdater.notifyAppReady()
+},[])
+  // Ensure download and activation occur when the app is initialized
+ 
   console.log("test",CapacitorUpdater.notifyAppReady())
   return null
 
 }
+
 
 export default InitializeApp
 
