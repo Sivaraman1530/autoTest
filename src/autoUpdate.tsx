@@ -50,7 +50,7 @@ const InitializeApp= ()=> {
       const version = await CapacitorUpdater.download({
         url: 'https://github.com/Sivaraman1530/autoTest/archive/refs/tags/test.zip',
         // You may need to specify the current version here
-        version: '9.0.0'
+        version: '10.0.0'
       });
 
       // Activate the update
