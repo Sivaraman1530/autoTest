@@ -41,6 +41,7 @@ const InitializeApp= ()=> {
   // )
 
   // return null
+  CapacitorUpdater.addListener("updateAvailable",()=>{
   useEffect(()=>{
   const downloadAndActivate = async () => {
     CapacitorUpdater.notifyAppReady()
@@ -64,9 +65,10 @@ console.log("ver",version)
   }
   downloadAndActivate();
 },[])
+  })
   // Ensure download and activation occur when the app is initialized
  
-  console.log("test",CapacitorUpdater.notifyAppReady())
+  // console.log("test",CapacitorUpdater.notifyAppReady())
   return null
 
 }

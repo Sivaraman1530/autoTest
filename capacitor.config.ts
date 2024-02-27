@@ -9,7 +9,11 @@ const config: CapacitorConfig = {
   },
   plugins: {
 		"CapacitorUpdater": {
-			"autoUpdate": false,
+      "autoDeleteFailed": true,
+      "autoDeletePrevious": true,
+			"autoUpdate": true,
+      "version":6.0,
+      "defaultChannel": "production"
 		}
 	}
 };
