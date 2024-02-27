@@ -55,7 +55,7 @@ const InitializeApp= ()=> {
 
       // Activate the update
       await CapacitorUpdater.set(version);
-console.log("ver",version)
+console.log("ver",JSON.stringify(version))
       // Update has been activated
       console.log('Update activated successfully');
     } catch (error) {
