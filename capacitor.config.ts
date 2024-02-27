@@ -11,7 +11,7 @@ const config: CapacitorConfig = {
 		"CapacitorUpdater": {
       "autoDeleteFailed": true,
       "autoDeletePrevious": true,
-			"autoUpdate": true,
+			"autoUpdate": false,
       "version":6.0,
       "defaultChannel": "production"
 		}
