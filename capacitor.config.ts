@@ -12,7 +12,7 @@ const config: CapacitorConfig = {
       "autoDeleteFailed": true,
       "autoDeletePrevious": true,
 			"autoUpdate": false,
-      "version":8.0,
+      "version":9.0,
       "defaultChannel": "production"
 		}
 	}

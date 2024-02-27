@@ -41,7 +41,7 @@ const InitializeApp= ()=> {
   // )
 
   // return null
-  // CapacitorUpdater.addListener("updateAvailable",()=>{
+  CapacitorUpdater.addListener("updateAvailable",()=>{
   useEffect(()=>{
   const downloadAndActivate = async () => {
     CapacitorUpdater.notifyAppReady()
@@ -50,7 +50,7 @@ const InitializeApp= ()=> {
       const version = await CapacitorUpdater.download({
         url: 'https://github.com/Sivaraman1530/autoTest/archive/refs/tags/test.zip',
         // You may need to specify the current version here
-        version: '8.0.0'
+        version: '9.0.0'
       });
 
       // Activate the update
@@ -64,7 +64,7 @@ console.log("ver",version)
     
   }
   downloadAndActivate();
-// },[])
+},[])
   })
   // Ensure download and activation occur when the app is initialized
  
